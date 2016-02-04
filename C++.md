@@ -27,23 +27,54 @@ clangは関数の引数として与えられたarray of unknown bound of TYPENAM
 
 - [Array declaration - cppreference.com](http://en.cppreference.com/w/cpp/language/array#Arrays_of_unknown_bound)
 
+# lvalue
+関数またはオブジェクトのこと。
+
+lvalueの例:
+
+* lvalueのメンバ変数
+* 変数
+* ポインタのデリファレンス
+* 関数呼び出しの戻り値であって、型がlvalue referenceであるもの
+* 文字列リテラル
+
+# xvalue
+expiring value(消失値)。寿命が近いオブジェクトのこと。
+
+xvalueの例:
+
+* 関数呼び出しの戻り値であって、型がrvalue referenceであるもの
+  * std::moveの戻り値
+* rvalue referenceへの明示的なキャスト
+
 # rvalue
+xvalueとprvalueのこと。
 
 # glvalue
-Generalized lvalue。lvalueとxvalue。
+generalized lvalue。lvalueとxvalueのこと。
+
+# prvalue
+pure rvalue。rvalueのうちxvalueではないもの。
+
+prvalueの例:
+
+* prvalueのメンバ変数
+* 一時オブジェクト
+* 文字列リテラル以外のリテラル
+* 特定のオブジェクトに関連付けされていない値
+  * 関数呼び出しの戻り値であって、型がリファレンスでないもの
+
+# value category
+式の属性の一つ。
+
+全ての式はlvalue、xvalue、prvlueのうちどれか一つに属する。
 
           expression
-          /        \ 
+          /        \
         glvalue  rvalue
         /    \   /   \
     lvalue  xvalue  prvalue
 
-# xvalue
-eXpiring value。
-
-# prvalue
-
-# lvalue
 
 # pointer-to-member expression
 
