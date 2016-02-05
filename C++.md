@@ -38,6 +38,9 @@ lvalueの例:
 * 関数呼び出しの戻り値であって、型がlvalue referenceであるもの
 * 文字列リテラル
 
+- [何が lvalue で何が rvalue なのか - iorate's blog](http://iorate.hatenablog.com/entry/20111207/1323280542)
+- [C++11: Syntax and Feature](http://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#basic.lval) 
+
 # xvalue
 expiring value(消失値)。寿命が近いオブジェクトのこと。
 
