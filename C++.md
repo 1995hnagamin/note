@@ -81,3 +81,29 @@ prvalueの例:
 
 # pointer-to-member expression
 
+# unnamed namespace
+# 無名名前空間
+
+    namespace { 本体 }
+
+名前のない名前空間。
+無名名前空間で定義された名前は、宣言場所(point of declaration)から翻訳単位の終わりまで有効である。
+
+* (C++03まで) 無名名前空間内で宣言された名前は、*extern指定子の有無にかかわらず*内部リンケージをもつ。
+* (C++11から) 無名名前空間および無名名前空間内で直接的・間接的に宣言された名前空間は内部リンケージをもつ。
+
+上のプログラムは次と等価な振る舞いをする。ここで、uniqueは翻訳単位で一意な名前である。
+
+    namespace unique {}
+    using namespace unique;
+    namespace unique { 本体 }
+
+static指定子より無名名前空間を使うほうが望ましい。
+static指定子は無名名前空間と違い、名前のあるクラスなどを内部リンケージにすることはできない。
+C++11でstaticはdeprecatedになる予定だったが、Cとの互換性のためundeprecatedされた。
+
+- [無名（匿名）名前空間の不思議な定義 - yohhoyの日記](http://d.hatena.ne.jp/yohhoy/20121130/p1)
+- [Namespaces - cppreference.com](http://en.cppreference.com/w/cpp/language/namespace#Unnamed_namespaces)
+- [C++11: Syntax and Feature](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#namespace.unnamed)
+- [C++ Standard Core Language Defect Reports and Accepted Issues](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1012)
+
