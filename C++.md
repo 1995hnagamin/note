@@ -107,3 +107,35 @@ C++11でstaticはdeprecatedになる予定だったが、Cとの互換性のた�
 - [C++11: Syntax and Feature](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#namespace.unnamed)
 - [C++ Standard Core Language Defect Reports and Accepted Issues](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1012)
 
+# inline namespace
+# inline名前空間
+
+    inline namespace 名前 { 本体 }
+
+inline名前空間は、それを直接包む名前空間に対して透過的になる。
+すなわち、inline名前空間で宣言された名前は、あたかも1つ上の名前空間においても宣言されたかのように見える。
+あるinline名前空間を包む名前空間もまたinline名前空間であった場合、2つ上の、3つ上の、…と続く。
+
+`#ifndef`ディレクティブでコンパイル時に提供する機能を切り替えるなどの使い方がある。
+
+    #if __cplusplus < 1997L
+      inline
+    #endif
+      namespace pre_cxx_1997 {
+        template<class T> __vector_impl;
+        // ...
+      }
+
+    #if __cplusplus >= 1997L
+      #if __cplusplus == 1997L
+        inline
+      #endif
+        namespace cxx_1997 {
+          template<class T, class Alloc=std::allocator<T> >
+          class vector : pre_cxx_1997::__vector_impl<T> {
+            // ...
+          }
+        }
+    #endif
+
+- [What are inline namespaces for? - Stack Overflow](http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for)
