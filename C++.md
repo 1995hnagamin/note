@@ -3,7 +3,7 @@
 次の型。
 * (CV修飾された)void
 * 定義がないクラス型, 列挙型
-* 不明サイズの配列 (arrays of unknown bound [of <Typename>])
+* 不明サイズの配列 (arrays of unknown bound [of TYPENAME])
 * 不完全型の要素の配列
 
 (CV修飾された)void以外の不完全型は欠けている情報を補うことで完全型にすることができる。
