@@ -187,6 +187,24 @@ links:
 - [What are inline namespaces for? - Stack Overflow](http://stackoverflow.com/questions/11016220/what-are-inline-namespaces-for)
 
 
+# 仮想基本クラス
+=virtual基本クラス,virtual base class
+
+virtual指定されている基本クラス。
+仮想基本クラスのオブジェクトは派生クラスで共有される。
+
+    class V { };
+    class A : virtual public V { };
+    class B : virtual public V { };
+    class C : public A, public B { };  // Vのサブオブジェクトを1つもつ
+    class P : public V { };
+    class Q : public P { }; // Vのサブオブジェクトを2つもつ
+
+links:
+- [C++11: Syntax and Feature](http://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#class.mi)
+- N3337 10.1 [class.mi]
+
+
 # 標準レイアウトクラス
 =standard-layout class
 
