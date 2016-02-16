@@ -81,6 +81,10 @@ prvalueの例:
 
 # pointer-to-member expression
 
+# nested-name-specifier
+
+qualified-idが`/(([:alpha:]+::)+)::[:alpha:]+$/`にマッチした時の`$1`( `([:alpha:]+::)+` )に当たる部分。
+
 # unnamed namespace
 # 無名名前空間
 
