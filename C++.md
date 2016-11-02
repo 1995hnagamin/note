@@ -267,3 +267,21 @@ Plain Old Data struct。標準レイアウトクラスかつtrivial classであ�
 
 POD構造体は仮想基本クラスや非標準レイアウトクラスを基本クラスにもたない。
 POD構造体はtrivialなデストラクタをもつ。
+
+# 初期化子リスト
+=intializer list,list-initialization
+
+braced-init-listでオブジェクトまたは参照を初期化することをリスト初期化(list-initialization)という。
+
+ここで、braced-init-listは式またはbraced-init-listを{}で囲んだものである。空でも良い。これを初期化子リスト(initializer list)という。
+正確には、
+
+    braced-init-list:
+        { initializer-list ,(opt) }
+        { }
+    initializer-list:
+        initializer-close ...(opt)
+        initializer-list , initializer-close ...(opt)
+    initializer-close:
+        assignment-expression
+        braced-init-list
