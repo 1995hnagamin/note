@@ -239,6 +239,19 @@ Trivial classは次をもたない:
 
 Trivial classはtrivialなデストラクタをもつ。
 
+# 省略記号
+=ellipsis,...
+
+`...`。可変長のものを表すのに用いられる。
+
+* 可変長引数 `int printf(const char *, ...)`
+* 可変長テンプレート引数 `template<class ... Args>` はパック展開(pack expansion)されることで様々に用いられる。
+  * キャプチャ `[args ...](int x) { /* */ };`
+  * 基本クラス `class Derived : Base1 ... { /* */ };`
+  * アトリビュート `[[attr]] ...`
+  * 初期化リスト `{ x ... }`
+* (アトリビュートの仕様によっては) アトリビュート
+
 
 # POD構造体
 =POD struct
