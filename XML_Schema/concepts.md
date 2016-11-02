@@ -125,3 +125,15 @@ valueで値を指定する。
     </xsd:complexType>
 
 [たのしいXML: Schema(スキーマ) 単純型内容を持った複合型 - 定義の基本](http://www6.airnet.ne.jp/manyo/xml/schema/step13.html)
+
+# グローバル要素
+=global element
+
+xsd:schema要素の直接の子である要素。
+
+[XML Schema Element Substitution](http://www.w3schools.com/xml/schema_complex_subst.asp)
+
+# ローカル要素
+=local element
+
+グローバル要素でない要素。
