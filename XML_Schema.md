@@ -7,7 +7,7 @@
   * 単純型内容を持った複合型
   * 複合型内容を持った複合型
 
-# xsd:element要素
+# xsd:element
 
 データ型を宣言する
 xsd:schemaの直下に記述する
@@ -36,16 +36,16 @@ xsd:schemaの直下に記述する
 
 See http://www.atmarkit.co.jp/ait/articles/0401/07/news072.html
 
-# xsd:complexType要素
+# xsd:complexType
 
 複雑型を宣言する
 xsd:elementの直下に記述する
 
-# xsd:sequence要素
+# xsd:sequence
 
 子要素の順番を指定する
 
-# xsd:attribute要素
+# xsd:attribute
 
 要素が持つべき属性を指定する
 xsd:complexType の直下に記述する
@@ -70,7 +70,7 @@ default属性とfixed属性は同時に指定されてはいけない。
 
 [XMLテクニック集(7):XML Schemaで単純型要素を定義する(3/3)](http://www.atmarkit.co.jp/ait/articles/0311/12/news001_3.html)
 
-# xsd:choice要素
+# xsd:choice
 
 データ型が複数の表現を持つとき、その表現を指定する
 
