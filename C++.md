@@ -298,3 +298,18 @@ braced-init-listでオブジェクトまたは参照を初期化することを�
 # 例外を投げない保証
 
 オブジェクトの状態を更新する際に例外が発生しないという保証。
+
+# reference-related
+
+型"cv1 T1"が"cv2 T2"についてreference-relatedであるとは、T1とT2とが型として同じであるか、またはT1がT2の基本クラスであることをいう。
+
+# reference-compatible
+
+型"cv1 T1"が"cv2 T2"に対してreference-compatibleであるとは、次のすべてが成り立つことをいう。
+* 次のいずれかが成り立つ。
+  * T1がT2についてreference-relatedである。
+  * T1が関数型であって、かつT2が"noexcept T1"の形式である。
+* cv1はcv2以上の修飾子である。
+
+links:
+- [[decl.init.ref]/4](http://eel.is/c++draft/dcl.init.ref#4)
