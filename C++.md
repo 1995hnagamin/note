@@ -313,3 +313,20 @@ braced-init-listでオブジェクトまたは参照を初期化することを�
 
 links:
 - [[decl.init.ref]/4](http://eel.is/c++draft/dcl.init.ref#4)
+
+# スコープ
+=scope,宣言範囲,declarative region
+
+* ブロックスコープ (block scope)
+* 関数プロトタイプのスコープ (function prototype scope)
+* 関数のスコープ (function scope)
+* 名前空間のスコープ (namespace scope)
+  * グローバル名前空間のスコープ (global namespace scope)
+* クラススコープ (class scope)
+* enumスコープ (enumeration scope)
+* テンプレート仮引数のスコープ (template parameter scope)
+
+ラベル名は関数のスコープに属する。
+
+links:
+- [C++11: Syntax and Feature - スコープ(Scope)](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#basic.scope)
