@@ -1,5 +1,5 @@
 # 不完全型
-=imcomplete type
+=incomplete type
 
 次の型。
 * (CV修飾された)void
@@ -269,7 +269,7 @@ POD構造体は仮想基本クラスや非標準レイアウトクラスを基�
 POD構造体はtrivialなデストラクタをもつ。
 
 # 初期化子リスト
-=intializer list,list-initialization
+=initializer list,list-initialization
 
 braced-init-listでオブジェクトまたは参照を初期化することをリスト初期化(list-initialization)という。
 
