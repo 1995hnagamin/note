@@ -1,3 +1,83 @@
+# 静的型
+=static type
+
+意味解析を行わずに、式の形式だけから導かれる型。 [dfns.static.type]
+
+
+# 動的型
+=dynamic type
+
+glvalueに対する動的型とは、そのglvalueが参照するオブジェクトの最終派生クラスをいう。 [dfns.dynamic.type]
+prvalueに対する動的型とは、その式の静的型をいう。 [dfns.dynamic.type.prvalue]
+
+
+# low-order bit
+
+最下位ビット(least significant bit)
+
+# high-order bit
+
+最上位ビット(most significant bit)
+
+# memory location
+
+スカラー型オブジェクト、または連続する非ゼロ幅ビットフィールドの最長列。[intro.memory]/3
+異なるmemory locationは、別々のスレッドから同時並行的にアクセス・更新することができる。 [intro.memory]/3
+
+
+# オブジェクト
+=object
+
+ストレージ上の領域。[intro.object]/1
+
+オブジェクトが作られる原因:
+- 定義
+- new式
+- (必要なときに)処理系
+
+オブジェクトが持つ属性:
+- 名前 (あれば)
+- ストレージの有効期間
+  - 寿命
+- 型
+
+# (オブジェクトの)型
+=object type
+
+オブジェクトを作る時に使った型。[intro.object]/1
+
+
+# サブオブジェクト
+=subobject
+
+- メンバーサブオブジェクト member subobject
+- 基本クラスサブオブジェクト base class subobject
+- 配列の要素 array element
+
+
+# 完全なオブジェクト
+=complete object
+<!-- 「完全なオブジェクト」という訳語は江添さんのを真似した -->
+
+他のオブジェクトのサブオブジェクトでないオブジェクト。[intro.object]/2
+
+あるオブジェクトに対する完全なオブジェクトとは、それを含む唯一の完全なオブジェクトをいう。 [intro.object]/3
+
+links:
+- [サブオブジェクトの有効期間](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#basic.stc.dynamic.safety)
+
+
+# 最終派生クラス
+=most derived class,最も派生したクラス
+
+| zh.cppreference.com       | 最终派生类         |
+| C++11: Syntax and Feature | 最も派生したクラス |
+
+links:
+- [派生类](http://zh.cppreference.com/w/cpp/language/derived_class)
+- [型式別(Type Identification)](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#dynamic_cast_other)
+
+
 # 不完全型
 =incomplete type
 
