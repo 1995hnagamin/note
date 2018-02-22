@@ -70,6 +70,8 @@ links:
 # 最終派生クラス
 =most derived class,最も派生したクラス
 
+| ページ                    | 訳語               |
+| ------------------------- | ------------------ |
 | zh.cppreference.com       | 最终派生类         |
 | C++11: Syntax and Feature | 最も派生したクラス |
 
