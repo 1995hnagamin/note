@@ -33,13 +33,21 @@ prvalueに対する動的型とは、その式の静的型をいう。 [dfns.dyn
 オブジェクトが作られる原因:
 - 定義
 - new式
-- (必要なときに)処理系
+- (必要なときに)処理系[^object.1]
 
 オブジェクトが持つ属性:
 - 名前 (あれば)
 - ストレージの有効期間
   - 寿命
 - 型
+
+[^object.1]:
+  実装は必要に応じて一時オブジェクト(temporary object)を生成するが、省略することもある。 [class.temporary]
+
+links:
+- N3337
+  -  1.8 [intro.object]
+  - 12.2 [class.temporary]
 
 # (オブジェクトの)型
 =object type
@@ -77,7 +85,7 @@ links:
 
 links:
 - [派生类](http://zh.cppreference.com/w/cpp/language/derived_class)
-- [型式別(Type Identification)](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#dynamic_cast_other)
+- [型識別(Type Identification)](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#dynamic_cast_other)
 
 
 # 不完全型
@@ -113,21 +121,6 @@ clangは関数の引数として与えられたarray of unknown bound of TYPENAM
 
 links:
 - [Array declaration - cppreference.com](http://en.cppreference.com/w/cpp/language/array#Arrays_of_unknown_bound)
-
-
-# オブジェクト
-=object
-
-オブジェクトは定義やnew式、実装[^object.1]によって生成される。関数はオブジェクトではない。
-すべてのオブジェクトはストレージの有効期間(storage duration)、型(type)をもつ。
-
-[^object.1]:
-  実装は必要に応じて一時オブジェクト(temporary object)を生成するが、省略することもある。
-
-links:
-- N3337
-  -  1.8 [intro.object]
-  - 12.2 [class.temporary]
 
 
 # ポリモーフィッククラス
