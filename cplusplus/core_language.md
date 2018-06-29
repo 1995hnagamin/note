@@ -85,7 +85,7 @@ links:
 
 links:
 - [派生类](http://zh.cppreference.com/w/cpp/language/derived_class)
-- [型式別(Type Identification)](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#dynamic_cast_other)
+- [型識別(Type Identification)](https://ezoeryou.github.io/cpp-book/C++11-Syntax-and-Feature.xhtml#dynamic_cast_other)
 
 
 # 不完全型
