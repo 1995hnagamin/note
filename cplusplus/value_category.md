@@ -4,7 +4,7 @@
 
 ## 関数呼び出し (function call)
 
-*lvalue
+* lvalue
   * 返り値型が lvalue リファレンス型のとき
   * 返り値型が関数に対する rvalue リファレンス型のとき
 * xvalue
